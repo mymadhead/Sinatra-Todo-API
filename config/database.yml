@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+
+development:
+  <<: *default
+  database: todo
+
+test:
+  <<: *default
+  database: test-todo
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
